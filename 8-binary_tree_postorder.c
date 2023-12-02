@@ -10,10 +10,7 @@ void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int))
     if (tree == NULL || func == NULL)
         return;
 
-    // Go left
     binary_tree_postorder(tree->left, func);
-    // Go right
     binary_tree_postorder(tree->right, func);
-    // Print
     func(tree->n);
 }
