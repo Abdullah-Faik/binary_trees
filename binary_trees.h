@@ -31,28 +31,37 @@ void binary_tree_print(const binary_tree_t *);
 
 /* Mandatory Tasks */
 
-	/* inserting tasks*/
+/* inserting tasks*/
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
 
-	/*delete task*/
+/*delete task*/
 void binary_tree_delete(binary_tree_t *tree);
-	/* node checker*/
+/* node checker*/
 int binary_tree_is_leaf(const binary_tree_t *node);
 int binary_tree_is_root(const binary_tree_t *node);
-	/*prenting order*/
+/*prenting order*/
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
 void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
-	/*tree shape*/
+/*tree shape*/
 size_t binary_tree_height(const binary_tree_t *tree);
 size_t binary_tree_depth(const binary_tree_t *tree);
 size_t binary_tree_size(const binary_tree_t *tree);
 size_t binary_tree_leaves(const binary_tree_t *tree);
 size_t binary_tree_nodes(const binary_tree_t *tree);
-	/*tree balance*/
+/*tree balance*/
 int binary_tree_balance(const binary_tree_t *tree);
-int binary_tree_depth_1(const binary_tree_t *tree);
+static int binary_tree_depth_1(const binary_tree_t *tree);
 int binary_tree_is_full(const binary_tree_t *tree);
+int binary_tree_is_perfect(const binary_tree_t *tree);
+/** binary_tree_t *binary_tree_sibling(binary_tree_t *node);
+// binary_tree_t *binary_tree_uncle(binary_tree_t *node);*/
+/**
+ * binary_tree_depth_1 - measures the height of a binary tree
+ * @tree: pointer to the root node of the tree to measure the height
+ * Return: height of the tree, or 0 if tree is NULL
+ */
+
 #endif /* BINARY_TREES_H */
